@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Travelmoon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+
+<body class="account-page-body">
+  <header class="header-account" id="home">
+    <nav>
+      <div class="nav__bar">
+        <div class="logo nav__logo">
+          <a href="homepage2.html">Travelmoon</a>
+        </div>
+
+
+
+
+
+      </div>
+    </nav>
+
+    <div class="form__account" id="form">
+      <div class="form__text">
+
+        <h2>Welcome to Travelmoon</h2>
+        <p>Sign in to continue</p>
+        <br>
+        <!-- google sign in -->
+        <button class="gsi-material-button">
+          <div class="gsi-material-button-state"></div>
+          <div class="gsi-material-button-content-wrapper">
+            <div class="gsi-material-button-icon">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                xmlns:xlink="http://www.w3.org/1999/xlink" style="display: block;">
+                <path fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z">
+                </path>
+                <path fill="#4285F4"
+                  d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z">
+                </path>
+                <path fill="#FBBC05"
+                  d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z">
+                </path>
+                <path fill="#34A853"
+                  d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z">
+                </path>
+                <path fill="none" d="M0 0h48v48H0z"></path>
+              </svg>
+            </div>
+            <span class="gsi-material-button-contents"><a href="https://accounts.google.com/ServiceLogin?hl=zh-TW&passive=true&continue=https://www.google.com/search%3Fq%3Dgoogle%2Blogin%26oq%3Dgoogle%2Blo%26pf%3Dcs%26sourceid%3Dchrome%26ie%3DUTF-8&ec=GAZAAQ" target="_blank" style="color: black;">Continue with Google</a></span>
+            <span style="display: none;">Continue with Google</span>
+          </div>
+        </button>
+        <br><br>
+        <p>or</p>
+      </div>
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Peter">
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Chan">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address*</label>
+        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
+          placeholder="abc123@email.com" required>
+        <div id="emailHelp" class="form-text">*We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password*</label>
+        <input type="password" class="form-control" name="pw" id="password" placeholder="" required>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terms-conditions-check">
+        <label class="form-check-label" name="terms-conditions-check" for="terms-conditions" aria-required="true">I
+          agree to Travelmoon's <a href="#">terms and conditions statement</a> and <a href="#"> Private Policy.</a>
+        </label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="marketing">
+        <label class="form-check-label" name="marketing-check" for="marketing" aria-required="true">I want to receive
+          emails about latest trips and travel guides from Travelmoon!</label>
+      </div>
+      <button type="submit" class="signUp__btn" id="openModal" onclick="signUp()">Sign up</button>
+      <div class="message">
+        <div class="success" id="success">You have successfully singed up!</div>
+        <div class="danger" id="danger">Feilds Can't be Empty!</div>
+      </div>
+
+    </div>
+  </header>
+  <!-- <form method="get">
+        <div class="account__form">
+            <label for="inputEmail">Email address: </label> <br>
+            <input type="email" id="email" placeholder="peterchan@gmail.com">
+        </div>
+    </form>
+    <section>
+        <div class="account__container">
+            <h1>Sign in</h1>
+        </div>
+    </section>            -->
+
+  <div class="modal" id="modal">
+    <div class="modal-inner">
+      <h2>Thank you!</h2>
+      <p>Thank you for signing up! Let's Travelmoon be your travel companion.</p>
+      <button id="closeModal" class="tour__btn"><a href="./homepage2.html" style="color: rgb(0, 0, 0);">Go Back to Homepage</a></button>
+    </div>
+  </div>
+
+</body>
+<script src="account.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+</html>
